@@ -1,0 +1,47 @@
+<div class="panel">
+  <div>Using only core C# or Java or JavaScript language (no open-source libraries) write a method that takes in a file as input
+    and returns true or false whether the contents of the file is a valid solution to a Sudoku puzzle.</div>
+  <div>The solution should handle exception scenarios.</div>
+  <div>(You can create additional classes as necessary. Please keep all classes in same solution. Also include unit tests and
+    test case files used.)</div>
+  <a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">https://en.wikipedia.org/wiki/Sudoku</a>
+
+</div>
+
+<div class="container">
+
+  <app-sudoku-load (outputEvent)="onOutputEvent($event)"></app-sudoku-load>
+
+  <div class="form-group row" *ngIf="testResults && testResults.length>0">
+    <label class="col-sm-2 col-form-label">Test Results</label>
+    <div class="col-sm-10">
+      <div *ngFor="let testResult of testResults">
+        <div class="sudoku-result-not-valid">{{testResult}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row" *ngIf="testResults && testResults.length===0">
+    <label class="col-sm-2 col-form-label">Test Results</label>
+    <div class="col-sm-10">
+      <div class="sudoku-result-valid">Is Valid</div>
+    </div>
+  </div>
+
+  <div class="form-group row" *ngIf="txtBox && txtBox.txtRows.length<10 && sudokuBox.length===0">
+    <div *ngFor="let row of txtBox.txtRows; let i=index">
+      <div>#{{i+1}}: {{row}}</div>
+    </div>
+  </div>
+
+  <div class="form-group row" *ngIf="sudokuBox.length>0">
+    <div *ngFor="let row of [0,1,2,3,4,5,6,7,8]; let rowIndex=index">
+      <div class="sudoku-row" *ngFor="let cell of [0,1,2,3,4,5,6,7,8]; let cellIndex=index" [ngClass]="rowIndex===2||rowIndex===5?'sudoku-row-separator':''">
+        <div class="sudoku-cell" [ngClass]="[cellIndex===2||cellIndex===5?'sudoku-cell-separator':'' , sudokuBox[rowIndex][cellIndex].isValid?'':'sudoku-cell-not-valid']">
+          <div> {{sudokuBox[rowIndex][cellIndex].value}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

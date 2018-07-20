@@ -6,23 +6,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+SudokuComponent
+should be created
+should be supported exception on testSet_Null
+should be supported exception on testSet_WrongRowsNumber
+should be supported exception on testSet_WrongColumnsNumber
+should be supported exception on testSet_RowContanitsNotDigitSymbol
+should be supported exception on testSet_RowContanitsNotSupportedDigit
+should be supported exception on testSet_NotValidSet
+should be supported exception on testSet_ValidSet
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+.NET or Java or JavaScript
+Using only core C# or Java or JavaScript language (no open-source libraries), write a method that takes in a file as input and returns true or false whether the contents of the file is a valid solution to a Sudoku puzzle. The solution should handle exception scenarios.
+
+(You can create additional classes as necessary. Please keep all classes in same solution. Also include unit tests and test case files used.)
+
+[Sudoku](https://en.wikipedia.org/wiki/Sudoku).
+
+
+ 
+Expected file format included (input_sudoku.txt)

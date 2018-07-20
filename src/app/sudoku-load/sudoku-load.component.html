@@ -1,0 +1,17 @@
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Upload File</label>
+  <div class="col-sm-3">
+    <input type="file" id="inputFile" (change)="onFileChange($event)" #fileInput>
+  </div>
+  <div class="col-sm-1">
+      <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">clear file</button>
+    </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Default test set</label>
+  <div class="col-sm-4">
+    <select class="form-control" (change)="onChangeTestSet($event.target.value)">
+      <option *ngFor="let testSet of testSets" [value]="testSet.name">{{testSet.name}}</option>
+    </select>
+  </div>
+</div>
