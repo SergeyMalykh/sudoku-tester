@@ -1,7 +1,7 @@
 <!-- https://daringfireball.net/projects/markdown/syntax#link -->
 # Live
 
-You can preview this project at  [sudoku-tester](https://sergeymalykh.github.io/sudoku-tester/){:target="_blank"}.
+You can preview this project at  [sudoku-tester](https://sergeymalykh.github.io/sudoku-tester/ target="_blank").
 <!-- <a href="https://sergeymalykh.github.io/sudoku-tester/" target="_blank">sudoku-tester preview</a>. -->
 <!-- [sudoku-tester](https://sergeymalykh.github.io/sudoku-tester/). -->
 
