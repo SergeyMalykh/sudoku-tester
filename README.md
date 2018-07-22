@@ -1,3 +1,17 @@
+# Live
+
+You can preview this project [sudoku-tester](https://sergeymalykh.github.io/sudoku-tester/).
+
+# Requirements
+Using only core C# or Java or JavaScript language (no open-source libraries) write a method that takes in a file as input and returns true or false whether the contents of the file is a valid solution to a Sudoku puzzle.
+The solution should handle exception scenarios.
+(You can create additional classes as necessary. Please keep all classes in same solution. Also include unit tests and test case files used.)
+
+Sudoku wikipedia documentation [https://en.wikipedia.org/wiki/Sudoku](https://en.wikipedia.org/wiki/Sudoku).
+
+Expected file format included [input_sudoku.txt](https://raw.githubusercontent.com/SergeyMalykh/sudoku-tester/master/input_sudoku.txt).
+
+
 # Sudoku
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
@@ -10,15 +24,24 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-SudokuComponent
-should be created
-should be supported exception on testSet_Null
-should be supported exception on testSet_WrongRowsNumber
-should be supported exception on testSet_WrongColumnsNumber
-should be supported exception on testSet_RowContanitsNotDigitSymbol
-should be supported exception on testSet_RowContanitsNotSupportedDigit
-should be supported exception on testSet_NotValidSet
-should be supported exception on testSet_ValidSet
+The expected test result:
+
+AppComponent 
+should create the app 
+should have as title 'sudoku tester app'
+
+SudokuLoadComponent
+SudokuLoadComponent should be created
+
+SudokuComponent 
+0: SudokuComponent should be created 
+1: should be NO exceptions on test case selection 'testSet_ValidSet' 
+2: should be supported exception on test case selection 'testSet_Null' 
+3: should be supported exception on test case selection 'testSet_WrongRowsNumber' 
+4: should be supported exception on test case selection 'testSet_WrongColumnsNumber' 
+5: should be supported exception on test case selection 'testSet_RowContanitsNotDigitSymbol' 
+6: should be supported exception on test case selection 'testSet_RowContanitsNotSupportedDigit' 
+7: should be supported exception on test case selection 'testSet_NotValidSet' 
 
 
 ## Further help
@@ -30,6 +53,3 @@ Using only core C# or Java or JavaScript language (no open-source libraries), wr
 
 [Sudoku](https://en.wikipedia.org/wiki/Sudoku).
 
-
- 
-Expected file format included (input_sudoku.txt)

@@ -19,7 +19,7 @@ describe('SudokuLoadComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('SudokuLoadComponent should be created', () => {
     expect(component).toBeTruthy();
   });
 });

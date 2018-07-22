@@ -21,11 +21,19 @@ describe('SudokuComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it(`0: SudokuComponent should be created`, () => {
     expect(component).toBeTruthy();
   });
 
-  it('should be supported exception on testSet_Null', () => {
+  it(`1: should be NO exceptions on test case selection 'testSet_ValidSet'`, () => {
+    const testSet_ValidSet: ITxt = testSets.find(
+      testSet => testSet.name === TestNames.ValidSet
+    );
+    component.onOutputEvent(testSet_ValidSet);
+    expect(component.testResults.length).toBe(0);
+  });
+
+  it(`2: should be supported exception on test case selection 'testSet_Null'`, () => {
     const testSet_Null: ITxt = testSets.find(
       testSet => testSet.name === TestNames.Null
     );
@@ -39,7 +47,7 @@ describe('SudokuComponent', () => {
     );
   });
 
-  it('should be supported exception on testSet_WrongRowsNumber', () => {
+  it(`3: should be supported exception on test case selection 'testSet_WrongRowsNumber'`, () => {
     const testSet_WrongRowsNumber: ITxt = testSets.find(
       testSet => testSet.name === TestNames.WrongRowsNumber
     );
@@ -53,7 +61,7 @@ describe('SudokuComponent', () => {
     );
   });
 
-  it('should be supported exception on testSet_WrongColumnsNumber', () => {
+  it(`4: should be supported exception on test case selection 'testSet_WrongColumnsNumber'`, () => {
     const testSet_WrongColumnsNumber: ITxt = testSets.find(
       testSet => testSet.name === TestNames.WrongColumnsNumber
     );
@@ -73,7 +81,7 @@ describe('SudokuComponent', () => {
     );
   });
 
-  it('should be supported exception on testSet_RowContanitsNotDigitSymbol', () => {
+  it(`5: should be supported exception on test case selection 'testSet_RowContanitsNotDigitSymbol'`, () => {
     const testSet_RowContanitsNotDigitSymbol: ITxt = testSets.find(
       testSet => testSet.name === TestNames.RowContanitsNotDigitSymbol
     );
@@ -87,7 +95,7 @@ describe('SudokuComponent', () => {
     );
   });
 
-  it('should be supported exception on testSet_RowContanitsNotSupportedDigit', () => {
+  it(`6: should be supported exception on test case selection 'testSet_RowContanitsNotSupportedDigit'`, () => {
     const testSet_RowContanitsNotSupportedDigit: ITxt = testSets.find(
       testSet => testSet.name === TestNames.RowContanitsNotSupportedDigit
     );
@@ -107,7 +115,7 @@ describe('SudokuComponent', () => {
     );
   });
 
-  it('should be supported exception on testSet_NotValidSet', () => {
+  it(`7: should be supported exception on test case selection 'testSet_NotValidSet'`, () => {
     const testSet_NotValidSet: ITxt = testSets.find(
       testSet => testSet.name === TestNames.NotValidSet
     );
@@ -122,14 +130,6 @@ describe('SudokuComponent', () => {
     expect(component.testResults[1]).toEqual(
       'multiple cells in the column (9) have the same value 3'
     );
-  });
-
-  it('should be supported exception on testSet_ValidSet', () => {
-    const testSet_ValidSet: ITxt = testSets.find(
-      testSet => testSet.name === TestNames.ValidSet
-    );
-    component.onOutputEvent(testSet_ValidSet);
-    expect(component.testResults.length).toBe(0);
   });
 
 });
