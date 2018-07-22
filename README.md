@@ -1,6 +1,9 @@
 # Live
 
-You can preview this project  <a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">https://en.wikipedia.org/wiki/Sudoku</a>
+You can preview this project at <a href="https://sergeymalykh.github.io/sudoku-tester/" target="_blank">sudoku-tester preview</a>.
+[//]:  [sudoku-tester](https://sergeymalykh.github.io/sudoku-tester/).
+
+
 
 # Requirements
 Using only core C# or Java or JavaScript language (no open-source libraries) write a method that takes in a file as input and returns true or false whether the contents of the file is a valid solution to a Sudoku puzzle.
