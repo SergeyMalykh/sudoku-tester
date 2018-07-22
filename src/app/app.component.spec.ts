@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ describe('AppComponent', () => {
         AppComponent,
         SudokuComponent,
         SudokuLoadComponent
+      ],
+      imports: [
+        FormsModule, ReactiveFormsModule
       ],
     }).compileComponents();
   }));

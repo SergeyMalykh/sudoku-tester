@@ -8,7 +8,7 @@ import { ITxt, ICell } from '../sudoku.interface';
 })
 export class SudokuComponent implements OnInit {
   txtBox: ITxt;
-  testResults: Array<string> = [];
+  testResults: Array<string> = null;
   sudokuBox: ICell[][] = [];
   constructor() {}
 
@@ -16,7 +16,7 @@ export class SudokuComponent implements OnInit {
 
   onOutputEvent(txt?: ITxt) {
     this.txtBox = null;
-    this.testResults = [];
+    this.testResults = null;
     this.sudokuBox = [];
     if (txt) {
       this.txtBox = txt;
@@ -27,6 +27,7 @@ export class SudokuComponent implements OnInit {
   }
 
   toValidateTextBox(txt: ITxt): boolean {
+    this.testResults = [];
     const prefix = 'the tested file ';
     if (txt.txtRows.length !== 9) {
       this.testResults.push(

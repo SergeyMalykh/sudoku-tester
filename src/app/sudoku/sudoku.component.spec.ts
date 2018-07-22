@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SudokuComponent } from './sudoku.component';
@@ -5,13 +6,17 @@ import { ITxt } from '../sudoku.interface';
 import { testMockSets, TestNames } from '../sudoku.mock';
 import { SudokuLoadComponent } from '../sudoku-load/sudoku-load.component';
 
+
 describe('SudokuComponent', () => {
   let component: SudokuComponent;
   let fixture: ComponentFixture<SudokuComponent>;
   const testSets: Array<ITxt> = testMockSets;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SudokuComponent, SudokuLoadComponent]
+      declarations: [SudokuComponent, SudokuLoadComponent],
+      imports: [
+        FormsModule, ReactiveFormsModule
+      ],
     }).compileComponents();
   }));
 

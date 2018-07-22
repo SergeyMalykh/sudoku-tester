@@ -73,12 +73,12 @@ AppComponent = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sudoku_sudoku_component__ = __webpack_require__("./src/app/sudoku/sudoku.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sudoku_load_sudoku_load_component__ = __webpack_require__("./src/app/sudoku-load/sudoku-load.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/@angular/platform-browser.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sudoku_sudoku_component__ = __webpack_require__("./src/app/sudoku/sudoku.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__sudoku_load_sudoku_load_component__ = __webpack_require__("./src/app/sudoku-load/sudoku-load.component.ts");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -98,17 +98,17 @@ var AppModule = (function () {
     return AppModule;
 }());
 AppModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["b" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_3__sudoku_sudoku_component__["a" /* SudokuComponent */],
-            __WEBPACK_IMPORTED_MODULE_4__sudoku_load_sudoku_load_component__["a" /* SudokuLoadComponent */]
+            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_4__sudoku_sudoku_component__["a" /* SudokuComponent */],
+            __WEBPACK_IMPORTED_MODULE_5__sudoku_load_sudoku_load_component__["a" /* SudokuLoadComponent */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_5__angular_forms__["b" /* ReactiveFormsModule */]
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* ReactiveFormsModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -137,7 +137,7 @@ module.exports = module.exports.toString();
 /***/ "./src/app/sudoku-load/sudoku-load.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Sample File</label>\n  <div class=\"col-sm-3\">\n      <!-- https://help.data.world/hc/en-us/articles/115006300048-GitHub-how-to-find-the-sharable-download-URL-for-files-on-GitHub -->\n    <a href=\"https://raw.githubusercontent.com/SergeyMalykh/sudoku-tester/master/input_sudoku.txt\" target=\"_blank\">input_sudoku.txt</a>\n  </div>\n</div>\n\n<div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Upload File</label>\n  <div class=\"col-sm-3\">\n    <input type=\"file\" id=\"inputFile\" (change)=\"onFileChange($event)\" #fileInput>\n  </div>\n  <div class=\"col-sm-1\">\n      <button type=\"button\" class=\"btn btn-sm btn-default\" (click)=\"clearFile()\">clear file</button>\n    </div>\n</div>\n\n<div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Default test set</label>\n  <div class=\"col-sm-4\">\n    <select class=\"form-control\" (change)=\"onChangeTestSet($event.target.value)\">\n      <option *ngFor=\"let testSet of testSets\" [value]=\"testSet.name\">{{testSet.name}}</option>\n    </select>\n  </div>\n</div>\n"
+module.exports = "<div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Sample File</label>\n  <div class=\"col-sm-3\">\n    <!-- https://help.data.world/hc/en-us/articles/115006300048-GitHub-how-to-find-the-sharable-download-URL-for-files-on-GitHub -->\n    <a href=\"https://raw.githubusercontent.com/SergeyMalykh/sudoku-tester/master/input_sudoku.txt\" target=\"_blank\">input_sudoku.txt</a>\n  </div>\n</div>\n\n<div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Upload File</label>\n  <div class=\"col-sm-3\">\n    <input type=\"file\" id=\"inputFile\" (change)=\"onFileChange($event)\" #fileInput>\n  </div>\n  <div class=\"col-sm-1\">\n    <button type=\"button\" class=\"btn btn-sm btn-default\" (click)=\"clearFile()\">clear file</button>\n  </div>\n</div>\n\n<!-- <div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Default test set</label>\n  <div class=\"col-sm-4\">\n    <select class=\"form-control\" (change)=\"onChangeTestSet($event.target.value)\">\n      <option *ngFor=\"let testSet of testSets\" [value]=\"testSet.name\">{{testSet.name}}</option>\n    </select>\n  </div>\n</div> -->\n\n<div class=\"form-group row\">\n  <label class=\"col-sm-2 col-form-label\">Default test set</label>\n  <div class=\"col-sm-4\">\n    <select class=\"form-control\" [ngModel]=\"selectedTestSet\" (ngModelChange)=\"onChangeSelectedTestSet($event ? $event : null)\">\n      <option [ngValue]=\"null\">Choose a testing set</option>\n      <option *ngFor=\"let selectedTestSet of testSets\" [ngValue]=\"selectedTestSet\">{{selectedTestSet.name}}</option>\n    </select>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -163,9 +163,11 @@ var SudokuLoadComponent = (function () {
     function SudokuLoadComponent() {
         this.outputEvent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* EventEmitter */]();
         this.testSets = [];
+        this.selectedTestSet = null;
         this.testSets = __WEBPACK_IMPORTED_MODULE_1__sudoku_mock__["a" /* testMockSets */];
     }
     SudokuLoadComponent.prototype.onFileChange = function (event) {
+        this.selectedTestSet = null;
         var that = this;
         var reader = new FileReader();
         if (event.target.files && event.target.files.length > 0) {
@@ -212,6 +214,7 @@ var SudokuLoadComponent = (function () {
         this.outputEvent.emit(txt);
     };
     SudokuLoadComponent.prototype.clearFile = function () {
+        this.selectedTestSet = null;
         this.fileInput.nativeElement.value = '';
         this.outputEvent.emit(null);
     };
@@ -219,6 +222,11 @@ var SudokuLoadComponent = (function () {
         var testSet = __WEBPACK_IMPORTED_MODULE_1__sudoku_mock__["a" /* testMockSets */].find(function (t) { return t.name === testSetName; });
         this.fileInput.nativeElement.value = '';
         this.outputEvent.emit(testSet);
+    };
+    SudokuLoadComponent.prototype.onChangeSelectedTestSet = function (event) {
+        this.selectedTestSet = event;
+        this.fileInput.nativeElement.value = '';
+        this.outputEvent.emit(this.selectedTestSet);
     };
     return SudokuLoadComponent;
 }());
@@ -256,7 +264,7 @@ var TestNames = (function () {
     return TestNames;
 }());
 
-TestNames.Null = 'Null';
+TestNames.Null = 'Null Set';
 TestNames.WrongRowsNumber = 'Wrong number of rows';
 TestNames.WrongColumnsNumber = 'Wrong number of columns';
 TestNames.RowContanitsNotDigitSymbol = 'A row contanits not a digit symbol';
@@ -265,13 +273,9 @@ TestNames.NotValidSet = 'Not Valid Set';
 TestNames.ValidSet = 'Valid Set';
 var testMockSets = [
     {
-        name: TestNames.Null,
-        txtRows: []
-    },
-    {
-        name: TestNames.ValidSet,
+        name: TestNames.NotValidSet,
         txtRows: [
-            '534678912',
+            '534678913',
             '672195348',
             '198342567',
             '859761423',
@@ -283,9 +287,9 @@ var testMockSets = [
         ]
     },
     {
-        name: TestNames.NotValidSet,
+        name: TestNames.ValidSet,
         txtRows: [
-            '534678913',
+            '534678912',
             '672195348',
             '198342567',
             '859761423',
@@ -309,6 +313,10 @@ var testMockSets = [
             '287419635',
             '345286179'
         ]
+    },
+    {
+        name: TestNames.Null,
+        txtRows: []
     },
     {
         name: TestNames.WrongRowsNumber,
@@ -390,13 +398,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var SudokuComponent = (function () {
     function SudokuComponent() {
-        this.testResults = [];
+        this.testResults = null;
         this.sudokuBox = [];
     }
     SudokuComponent.prototype.ngOnInit = function () { };
     SudokuComponent.prototype.onOutputEvent = function (txt) {
         this.txtBox = null;
-        this.testResults = [];
+        this.testResults = null;
         this.sudokuBox = [];
         if (txt) {
             this.txtBox = txt;
@@ -407,6 +415,7 @@ var SudokuComponent = (function () {
     };
     SudokuComponent.prototype.toValidateTextBox = function (txt) {
         var _this = this;
+        this.testResults = [];
         var prefix = 'the tested file ';
         if (txt.txtRows.length !== 9) {
             this.testResults.push(prefix + " must includes 9 rows. The actual length is " + txt.txtRows.length);

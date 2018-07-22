@@ -1,7 +1,7 @@
 import { ITxt } from './sudoku.interface';
 
 export class TestNames {
-  static  Null = 'Null';
+  static  Null = 'Null Set';
   static  WrongRowsNumber = 'Wrong number of rows';
   static  WrongColumnsNumber = 'Wrong number of columns';
   static  RowContanitsNotDigitSymbol = 'A row contanits not a digit symbol';
@@ -12,13 +12,9 @@ export class TestNames {
 
 export const testMockSets: Array<ITxt> = [
   {
-    name: TestNames.Null,
-    txtRows: []
-  },
-  {
-    name: TestNames.ValidSet,
+    name: TestNames.NotValidSet,
     txtRows: [
-      '534678912',
+      '534678913',
       '672195348',
       '198342567',
       '859761423',
@@ -29,11 +25,10 @@ export const testMockSets: Array<ITxt> = [
       '345286179'
     ]
   },
-
   {
-    name: TestNames.NotValidSet,
+    name: TestNames.ValidSet,
     txtRows: [
-      '534678913',
+      '534678912',
       '672195348',
       '198342567',
       '859761423',
@@ -58,7 +53,10 @@ export const testMockSets: Array<ITxt> = [
       '345286179'
     ]
   },
-
+  {
+    name: TestNames.Null,
+    txtRows: []
+  },
   {
     name: TestNames.WrongRowsNumber,
     txtRows: ['534678913', '672195348']

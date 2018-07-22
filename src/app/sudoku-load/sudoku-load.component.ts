@@ -17,11 +17,13 @@ export class SudokuLoadComponent {
   @ViewChild('fileInput') fileInput: ElementRef;
   @Output() outputEvent = new EventEmitter<ITxt>();
   testSets: Array<ITxt> = [];
+  selectedTestSet?: ITxt = null;
   constructor() {
     this.testSets = testMockSets;
   }
 
   onFileChange(event) {
+    this.selectedTestSet = null;
     const that = this;
     const reader = new FileReader();
     if (event.target.files && event.target.files.length > 0) {
@@ -71,6 +73,7 @@ export class SudokuLoadComponent {
   }
 
   clearFile() {
+    this.selectedTestSet = null;
     this.fileInput.nativeElement.value = '';
     this.outputEvent.emit(null);
   }
@@ -80,4 +83,11 @@ export class SudokuLoadComponent {
     this.fileInput.nativeElement.value = '';
     this.outputEvent.emit(testSet);
   }
+
+  public onChangeSelectedTestSet(event?: ITxt): void {
+    this.selectedTestSet = event;
+    this.fileInput.nativeElement.value = '';
+    this.outputEvent.emit(this.selectedTestSet);
+  }
+
 }

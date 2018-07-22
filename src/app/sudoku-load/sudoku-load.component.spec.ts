@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SudokuLoadComponent } from './sudoku-load.component';
@@ -8,7 +9,10 @@ describe('SudokuLoadComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SudokuLoadComponent ]
+      declarations: [ SudokuLoadComponent ],
+      imports: [
+        FormsModule, ReactiveFormsModule
+      ],
     })
     .compileComponents();
   }));
