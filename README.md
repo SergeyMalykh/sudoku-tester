@@ -1,6 +1,6 @@
 # Live
 
-You can preview this project [sudoku-tester](https://sergeymalykh.github.io/sudoku-tester/).
+You can preview this project  <a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">https://en.wikipedia.org/wiki/Sudoku</a>
 
 # Requirements
 Using only core C# or Java or JavaScript language (no open-source libraries) write a method that takes in a file as input and returns true or false whether the contents of the file is a valid solution to a Sudoku puzzle.
@@ -26,22 +26,22 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 The expected test result:
 
-AppComponent 
-should create the app 
-should have as title 'sudoku tester app'
+AppComponent<br/>
+should create the app<br/>
+should have as title 'sudoku tester app'<br/>
 
-SudokuLoadComponent
-SudokuLoadComponent should be created
+SudokuLoadComponent<br/>
+SudokuLoadComponent should be created<br/>
 
-SudokuComponent 
-0: SudokuComponent should be created 
-1: should be NO exceptions on test case selection 'testSet_ValidSet' 
-2: should be supported exception on test case selection 'testSet_Null' 
-3: should be supported exception on test case selection 'testSet_WrongRowsNumber' 
-4: should be supported exception on test case selection 'testSet_WrongColumnsNumber' 
-5: should be supported exception on test case selection 'testSet_RowContanitsNotDigitSymbol' 
-6: should be supported exception on test case selection 'testSet_RowContanitsNotSupportedDigit' 
-7: should be supported exception on test case selection 'testSet_NotValidSet' 
+SudokuComponent<br/>
+0: SudokuComponent should be created<br/>
+1: should be NO exceptions on test case selection 'testSet_ValidSet'<br/>
+2: should be supported exception on test case selection 'testSet_Null'<br/>
+3: should be supported exception on test case selection 'testSet_WrongRowsNumber'<br/>
+4: should be supported exception on test case selection 'testSet_WrongColumnsNumber'<br/>
+5: should be supported exception on test case selection 'testSet_RowContanitsNotDigitSymbol'<br/>
+6: should be supported exception on test case selection 'testSet_RowContanitsNotSupportedDigit'<br/>
+7: should be supported exception on test case selection 'testSet_NotValidSet'<br/>
 
 
 ## Further help
