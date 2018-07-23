@@ -43,3 +43,80 @@ SudokuComponent<br/>
 5: should be supported exception on test case selection 'testSet_RowContanitsNotDigitSymbol'<br/>
 6: should be supported exception on test case selection 'testSet_RowContanitsNotSupportedDigit'<br/>
 7: should be supported exception on test case selection 'testSet_NotValidSet'<br/>
+
+
+<!-- 
+cd D:\Projects\Scotia_Test
+ng new sudoku
+cd sudoku
+ng serve --open
+
+ng generate component sudoku
+ng generate component sudoku-load
+
+app.module.ts :
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+imports: [BrowserModule, AppRouting, FormsModule, ReactiveFormsModule],
+
+npm install bootstrap
+package.json:
+"bootstrap": "^4.1.2", -> "bootstrap": "^3.3.7",
+
+.angular-cli.json
+ "styles": [
+       "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "styles.styl"
+      ],
+
+
+npm install
+npm start
+
+
+create folder in root: "docs"
+
+// https://alligator.io/angular/deploying-angular-app-github-pages/
+npm install -g angular-cli-ghpages
+
+ng build --prod --base-href "https://sergeymalykh.github.io/sudoku-tester/"
+
+// ERROR in ./src/main.ts
+// Module not found: Error can't resolve './$$_gendir/app/app.module.ngfactory'
+
+ng --version
+
+@angular/cli: 1.1.0
+node: 10.1.0
+os: win32 x64
+@angular/common: 4.4.7
+@angular/core: 4.4.7
+@angular/forms: 4.4.7
+
+
+npm install -g @angular/cli
+
+// npm downgrade:
+npm cache clean -f
+npm i -g npm@5.3.0
+not working: npm i -g npm@8.11.3
+npm i -g npm@5.3.0
+
+node -v
+v10.1.0
+v8.11.3
+
+
+"scripts": {
+    "ng": "ng",
+    "build": "ng build --env=prod --base-href \"https://sergeymalykh.github.io/sudoku-tester/\"",
+
+
+npm run build
+
+copy dist -> docs
+
+git add docs -f
+
+
+
+ -->
